@@ -161,9 +161,10 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # მედია ფაილების (ღვინის სურათების) კონფიგურაცია
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
