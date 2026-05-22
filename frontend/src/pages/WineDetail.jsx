@@ -57,17 +57,17 @@ export default function WineDetail() {
       </Link>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* მარცხენა მხარე: სურათი ანიმაციით */}
+        {/* 🛠️ მარცხენა მხარე: სურათი მორგებული ზომებით (მხოლოდ ეს ნაწილი შეიცვალა) */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          className="bg-wine-card/20 border border-wine-card/40 rounded-3xl p-8 flex items-center justify-center min-h-[450px] shadow-inner"
+          className="bg-wine-card/20 border border-wine-card/40 rounded-3xl p-4 w-full flex items-center justify-center min-h-[450px] shadow-inner"
         >
           {wine.image ? (
             <img
               src={wine.image}
               alt={wine.title}
-              className="max-h-[400px] object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+              className="w-full h-[418px] object-cover rounded-2xl drop-shadow-2xl hover:scale-105 transition-transform duration-300"
             />
           ) : (
             <span className="text-9xl filter drop-shadow-lg">🍷</span>

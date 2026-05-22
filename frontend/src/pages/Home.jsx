@@ -181,13 +181,13 @@ export default function Home() {
                     {/* 🔗 სურათი გადავა დეტალურ გვერდზე */}
                     <Link
                       to={`/wine/${wine.id}`}
-                      className="h-56 bg-wine-card/20 flex items-center justify-center relative overflow-hidden p-4 block cursor-pointer group"
+                      className="h-56 bg-wine-card/20 flex items-center justify-center relative overflow-hidden block cursor-pointer group"
                     >
                       {wine.image ? (
                         <img
                           src={wine.image}
                           alt={wine.title}
-                          className="h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                          className="h-full object-cover w-full group-hover:scale-105 transition-transform duration-500"
                         />
                       ) : (
                         <WineIcon className="w-16 h-16 text-wine-card" />
