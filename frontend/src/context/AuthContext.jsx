@@ -28,10 +28,13 @@ export const AuthProvider = ({ children }) => {
 
   // შესვლის ფუნქცია
   const login = async (username, password) => {
-    const res = await axios.post("http://127.0.0.1:8000/api/auth/login/", {
-      username,
-      password,
-    });
+    const res = await axios.post(
+      "https://georgianwinemarket.onrender.com/api/auth/login/",
+      {
+        username,
+        password,
+      },
+    );
     localStorage.setItem("token", res.data.access);
     localStorage.setItem("refresh", res.data.refresh);
     setToken(res.data.access);
@@ -40,11 +43,14 @@ export const AuthProvider = ({ children }) => {
 
   // რეგისტრაციის ფუნქცია
   const register = async (username, email, password) => {
-    await axios.post("http://127.0.0.1:8000/api/auth/register/", {
-      username,
-      email,
-      password,
-    });
+    await axios.post(
+      "https://georgianwinemarket.onrender.com/api/auth/register/",
+      {
+        username,
+        email,
+        password,
+      },
+    );
   };
 
   // სისტემიდან გამოსვლა

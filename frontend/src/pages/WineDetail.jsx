@@ -20,7 +20,7 @@ export default function WineDetail() {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/api/wines/${id}/`)
+      .get(`https://georgianwinemarket.onrender.com/api/wines/${id}/`)
       .then((res) => {
         setWine(res.data);
         setLoading(false);

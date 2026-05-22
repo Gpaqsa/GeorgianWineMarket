@@ -148,7 +148,10 @@ STATIC_URL = "static/"
 
 # დეველოპმენტისთვის ვრთავთ ყველა მისამართიდან წვდომას (React-ისთვის)
 CORS_ALLOW_ALL_ORIGINS = True
-
+CORS_ALLOWED_ORIGINS = [
+    "https://georgian-wine-market.vercel.app", # ამოვაშალე ბოლოდან /
+    "http://localhost:5173",                   # აქაც ამოვაშალე ბოლოდან /
+]
 # მედია ფაილების (ღვინის სურათების) კონფიგურაცია
 import os
 MEDIA_URL = '/media/'

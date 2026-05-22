@@ -20,7 +20,7 @@ export default function Profile() {
     const token = localStorage.getItem("token"); // ან შენი ავტორიზაციის კონტექსტიდან
 
     axios
-      .get("http://127.0.0.1:8000/api/orders/my/", {
+      .get("https://georgianwinemarket.onrender.com/api/orders/my/", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {

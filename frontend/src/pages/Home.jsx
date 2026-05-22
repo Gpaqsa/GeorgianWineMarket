@@ -24,8 +24,8 @@ export default function Home() {
     const fetchInitialData = async () => {
       try {
         const [regionsRes, varietiesRes] = await Promise.all([
-          axios.get("http://127.0.0.1:8000/api/regions/"),
-          axios.get("http://127.0.0.1:8000/api/varieties/"),
+          axios.get("https://georgianwinemarket.onrender.com/api/regions/"),
+          axios.get("https://georgianwinemarket.onrender.com/api/varieties/"),
         ]);
         setRegions(regionsRes.data);
         setVarieties(varietiesRes.data);
@@ -41,7 +41,7 @@ export default function Home() {
     const fetchWines = async () => {
       setLoading(true);
       try {
-        let url = "http://127.0.0.1:8000/api/wines/?";
+        let url = "https://georgianwinemarket.onrender.com/api/wines/?";
         if (selectedColor) url += `color=${selectedColor}&`;
         if (selectedRegion) url += `region=${selectedRegion}&`;
         if (selectedVariety) url += `variety=${selectedVariety}&`;
