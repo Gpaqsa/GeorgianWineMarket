@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-rjno8yq4qigvory&s7ab@w$qzh_=c%(92)5t+x!jm^*=qiodh3
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "https://georgianwinemarket.onrender.com",
+    "georgianwinemarket.onrender.com",
     'localhost',
     '127.0.0.1',
 ]
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',   # სულ ზემოთ უნდა იყოს
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -166,6 +167,11 @@ CORS_ALLOW_HEADERS = [
     "x-requested-with",
 ]
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # მედია ფაილების (ღვინის სურათების) კონფიგურაცია
 import os
