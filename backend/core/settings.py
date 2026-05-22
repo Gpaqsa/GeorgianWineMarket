@@ -152,6 +152,17 @@ CORS_ALLOWED_ORIGINS = [
     "https://georgian-wine-market.vercel.app", # ამოვაშალე ბოლოდან /
     "http://localhost:5173",                   # აქაც ამოვაშალე ბოლოდან /
 ]
+
+# დამატებით, დაამატე ეს, რომ პრობლემა საერთოდ გაქრეს:
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
 # მედია ფაილების (ღვინის სურათების) კონფიგურაცია
 import os
 MEDIA_URL = '/media/'
