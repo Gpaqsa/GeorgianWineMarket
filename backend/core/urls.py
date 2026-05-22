@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('wines.urls')), # ჩვენი აპლიკაციის API ლინკები
+    path('/', include('wines.urls')), # ჩვენი აპლიკაციის API ლინკები
 ]
 
 if settings.DEBUG:
