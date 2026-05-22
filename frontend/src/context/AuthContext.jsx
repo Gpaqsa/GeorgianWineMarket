@@ -43,14 +43,11 @@ export const AuthProvider = ({ children }) => {
 
   // რეგისტრაციის ფუნქცია
   const register = async (username, email, password) => {
-    await axios.post(
-      "https://georgianwinemarket.onrender.com/api/auth/register/",
-      {
-        username,
-        email,
-        password,
-      },
-    );
+    await axios.post("https://georgianwinemarket.onrender.com/auth/register/", {
+      username,
+      email,
+      password,
+    });
   };
 
   // სისტემიდან გამოსვლა
