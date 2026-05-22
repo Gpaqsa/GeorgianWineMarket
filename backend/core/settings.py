@@ -23,9 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-rjno8yq4qigvory&s7ab@w$qzh_=c%(92)5t+x!jm^*=qiodh3"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "https://georgianwinemarket.onrender.com",
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -148,8 +152,8 @@ STATIC_URL = "static/"
 
 # დეველოპმენტისთვის ვრთავთ ყველა მისამართიდან წვდომას (React-ისთვის)
 CORS_ALLOWED_ORIGINS = [
-    "https://georgian-wine-market.vercel.app", # ამოვაშალე ბოლოდან /
-    "http://localhost:5173",                   # აქაც ამოვაშალე ბოლოდან /
+    "https://georgian-wine-market.vercel.app", 
+    "http://localhost:5173",                   
 ]
 
 # დამატებით, დაამატე ეს, რომ პრობლემა საერთოდ გაქრეს:
