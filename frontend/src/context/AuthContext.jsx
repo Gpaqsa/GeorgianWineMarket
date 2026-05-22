@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
   // შესვლის ფუნქცია
   const login = async (username, password) => {
     const res = await axios.post(
-      "https://georgianwinemarket.onrender.com/api/auth/login/",
+      "https://georgianwinemarket.onrender.com/auth/login/",
       {
         username,
         password,

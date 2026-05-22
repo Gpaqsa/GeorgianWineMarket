@@ -147,7 +147,6 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 # დეველოპმენტისთვის ვრთავთ ყველა მისამართიდან წვდომას (React-ისთვის)
-CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "https://georgian-wine-market.vercel.app", # ამოვაშალე ბოლოდან /
     "http://localhost:5173",                   # აქაც ამოვაშალე ბოლოდან /
@@ -162,6 +161,7 @@ CORS_ALLOW_HEADERS = [
     "x-csrftoken",
     "x-requested-with",
 ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 # მედია ფაილების (ღვინის სურათების) კონფიგურაცია
 import os

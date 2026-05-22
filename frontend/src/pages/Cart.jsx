@@ -33,7 +33,7 @@ export default function Cart() {
     try {
       // ვუგზავნით ბექენდს კალათის მონაცემებს + ბეარერ ტოკენს
       await axios.post(
-        "https://georgianwinemarket.onrender.com/api/orders/",
+        "https://georgianwinemarket.onrender.com/orders/",
         {
           cartItems: cartItems,
           totalPrice: totalPrice,
