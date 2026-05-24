@@ -160,7 +160,7 @@ CORS_ALLOW_HEADERS = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 
-
+import os
 
 # მედია ფაილების (ღვინის სურათების) კონფიგურაცია
 MEDIA_URL = '/media/'
