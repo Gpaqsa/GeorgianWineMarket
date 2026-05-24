@@ -65,7 +65,7 @@ export default function WineDetail() {
         >
           {wine.image ? (
             <img
-              src={wine.image}
+              src={`https://georgianwinemarket.onrender.com${wine.image}`}
               alt={wine.title}
               className="w-full h-[418px] object-cover rounded-2xl drop-shadow-2xl hover:scale-105 transition-transform duration-300"
             />

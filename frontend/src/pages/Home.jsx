@@ -185,7 +185,7 @@ export default function Home() {
                     >
                       {wine.image ? (
                         <img
-                          src={wine.image}
+                          src={`https://georgianwinemarket.onrender.com${wine.image}`}
                           alt={wine.title}
                           className="h-full object-cover w-full group-hover:scale-105 transition-transform duration-500"
                         />
